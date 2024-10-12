@@ -1,0 +1,3190 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "warn",
+    "timestamp": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "./dashboard",
+      "store_selected": true
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "Internet-dns",
+        "address": "1.0.0.1",
+        "strategy": "ipv4_only",
+        "detour": "Internet"
+      },
+      {
+        "tag": "Best Latency-dns",
+        "address": "1.1.1.1",
+        "strategy": "ipv4_only",
+        "detour": "Best Latency"
+      },
+      {
+        "tag": "Lock Region ID-dns",
+        "address": "8.8.8.8",
+        "strategy": "ipv4_only",
+        "detour": "Lock Region ID"
+      },
+      {
+        "tag": "WhatsApp-dns",
+        "address": "8.8.4.4",
+        "strategy": "ipv4_only",
+        "detour": "WhatsApp"
+      },
+      {
+        "tag": "GAMESMAX(ML/FF/AOV)-dns",
+        "address": "8.8.4.4",
+        "strategy": "ipv4_only",
+        "detour": "GAMESMAX(ML/FF/AOV)"
+      },
+      {
+        "tag": "Route Port Game-dns",
+        "address": "9.9.9.9",
+        "strategy": "ipv4_only",
+        "detour": "Route Port Game"
+      },
+      {
+        "tag": "direct-dns",
+        "address": "local",
+        "strategy": "ipv4_only",
+        "detour": "direct"
+      },
+      {
+        "tag": "block-dns",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain_suffix": [
+          ".arpa.",
+          ".arpa"
+        ],
+        "server": "block-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "domain_suffix": [
+          "auth.speedtest.net",
+          "504.outline-vpn.cloud",
+          "kittiy.sbs",
+          "hms04.xmivideo.cfd",
+          "muriel.makeup",
+          "glweidf.cfd",
+          "kellie.makeup",
+          "cloudflare.b4a-devs.org",
+          "506.outline-vpn.cloud",
+          "iran-011-join.outline-vpn.cloud",
+          "api.cdn-tgju.org",
+          "obdii.cfd",
+          "cxc--join.outline-vpn.cloud",
+          "500.outline-vpn.cloud",
+          "meroiy.icu",
+          "auth.speedtest.net",
+          "kittiy.sbs",
+          "glweidf.cfd",
+          "cloudflare.b4a-devs.org",
+          "506.outline-vpn.cloud",
+          "iran-011-join.outline-vpn.cloud",
+          "api.cdn-tgju.org",
+          "cxc--join.outline-vpn.cloud",
+          "500.outline-vpn.cloud",
+          "503.outline-vpn.cloud",
+          "meroiy.icu",
+          "auth.speedtest.net",
+          "504.outline-vpn.cloud",
+          "kittiy.sbs",
+          "hms04.xmivideo.cfd",
+          "muriel.makeup",
+          "kellie.makeup",
+          "cloudflare.b4a-devs.org",
+          "506.outline-vpn.cloud",
+          "iran-011-join.outline-vpn.cloud",
+          "api.cdn-tgju.org",
+          "obdii.cfd",
+          "fragment---join.outline-vpn.cloud"
+        ],
+        "server": "direct-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "server": "block-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "geosite": "rule-malicious",
+        "server": "block-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "Internet",
+        "server": "Internet-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "Best Latency",
+        "server": "Best Latency-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "Lock Region ID",
+        "server": "Lock Region ID-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "WhatsApp",
+        "server": "WhatsApp-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "GAMESMAX(ML/FF/AOV)",
+        "server": "GAMESMAX(ML/FF/AOV)-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "Route Port Game",
+        "server": "Route Port Game-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "direct",
+        "server": "direct-dns",
+        "rewrite_ttl": 20
+      },
+      {
+        "outbound": "any",
+        "server": "direct-dns",
+        "rewrite_ttl": 20
+      }
+    ],
+    "reverse_mapping": true,
+    "strategy": "ipv4_only",
+    "independent_cache": true,
+    "disable_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tproxy",
+      "tag": "tproxy-in",
+      "listen": "::",
+      "listen_port": 9898,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "sniff_timeout": "300ms",
+      "domain_strategy": "prefer_ipv4",
+      "udp_timeout": 300
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Internet",
+      "outbounds": [
+        "Best Latency",
+        "📱SHΞЯVIN™ (12)",
+        "📱SHΞЯVIN™ (13)",
+        "📱SHΞЯVIN™ (14)",
+        "📱SHΞЯVIN™ (16)",
+        "📱SHΞЯVIN™ (17)",
+        "📱SHΞЯVIN™ (18)",
+        "📱SHΞЯVIN™ (19)",
+        "📱SHΞЯVIN™ (21)",
+        "📱SHΞЯVIN™ (22)",
+        "📱SHΞЯVIN™ (23)",
+        "📱SHΞЯVIN™ (28)",
+        "📱SHΞЯVIN™ (32)",
+        "📱SHΞЯVIN™ (34)",
+        "📱SHΞЯVIN™ (36)",
+        "📱SHΞЯVIN™ (37)",
+        "📱SHΞЯVIN™ (38)",
+        "📱SHΞЯVIN™ (39)",
+        "📱SHΞЯVIN™ (40)",
+        "📱SHΞЯVIN™ (42)",
+        "📱SHΞЯVIN™ (43)",
+        "📱SHΞЯVIN™ (44)",
+        "📱SHΞЯVIN™ (45)",
+        "📱SHΞЯVIN™ (46)",
+        "📱SHΞЯVIN™ (47)",
+        "📱SHΞЯVIN™ (49)",
+        "📱SHΞЯVIN™ (50)",
+        "📱SHΞЯVIN™ (52)",
+        "📱SHΞЯVIN™ (53)",
+        "📱SHΞЯVIN™ (54)",
+        "📱SHΞЯVIN™ (57)",
+        "📱SHΞЯVIN™ (58)",
+        "📱SHΞЯVIN™ (60)",
+        "📱SHΞЯVIN™ (64)",
+        "📱SHΞЯVIN™ (67)",
+        "📱SHΞЯVIN™ (68)",
+        "📱SHΞЯVIN™ (69)",
+        "📱SHΞЯVIN™ (74)",
+        "📱SHΞЯVIN™ (80)",
+        "📱SHΞЯVIN™ (81)",
+        "📱SHΞЯVIN™ (82)",
+        "📱SHΞЯVIN™ (83)",
+        "📱SHΞЯVIN™ (84)",
+        "📱SHΞЯVIN™ (85)",
+        "📱SHΞЯVIN™ (87)",
+        "📱SHΞЯVIN™ (88)",
+        "📱SHΞЯVIN™ (90)",
+        "📱SHΞЯVIN™ (91)",
+        "📱SHΞЯVIN™ (92)",
+        "📱SHΞЯVIN™ (93)",
+        "📱SHΞЯVIN™ (95)",
+        "📱SHΞЯVIN™ (96)",
+        "📱SHΞЯVIN™ (98)",
+        "📱SHΞЯVIN™ (99)",
+        "📱SHΞЯVIN™ (100)",
+        "📱SHΞЯVIN™ (102)",
+        "📱SHΞЯVIN™ (103)",
+        "📱SHΞЯVIN™ (104)",
+        "📱SHΞЯVIN™ (105)",
+        "📱SHΞЯVIN™ (106)",
+        "📱SHΞЯVIN™ (108)",
+        "📱SHΞЯVIN™ (109)",
+        "📱SHΞЯVIN™ (111)",
+        "📱SHΞЯVIN™ (113)",
+        "📱SHΞЯVIN™ (114)",
+        "📱SHΞЯVIN™ (115)",
+        "📱SHΞЯVIN™ (120)",
+        "📱SHΞЯVIN™ (124)",
+        "📱SHΞЯVIN™ (125)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(136)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(139)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(148)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(151)"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "Best Latency",
+      "outbounds": [
+        "📱SHΞЯVIN™ (12)",
+        "📱SHΞЯVIN™ (13)",
+        "📱SHΞЯVIN™ (14)",
+        "📱SHΞЯVIN™ (16)",
+        "📱SHΞЯVIN™ (17)",
+        "📱SHΞЯVIN™ (18)",
+        "📱SHΞЯVIN™ (19)",
+        "📱SHΞЯVIN™ (21)",
+        "📱SHΞЯVIN™ (22)",
+        "📱SHΞЯVIN™ (23)",
+        "📱SHΞЯVIN™ (28)",
+        "📱SHΞЯVIN™ (32)",
+        "📱SHΞЯVIN™ (34)",
+        "📱SHΞЯVIN™ (36)",
+        "📱SHΞЯVIN™ (37)",
+        "📱SHΞЯVIN™ (38)",
+        "📱SHΞЯVIN™ (39)",
+        "📱SHΞЯVIN™ (40)",
+        "📱SHΞЯVIN™ (42)",
+        "📱SHΞЯVIN™ (43)",
+        "📱SHΞЯVIN™ (44)",
+        "📱SHΞЯVIN™ (45)",
+        "📱SHΞЯVIN™ (46)",
+        "📱SHΞЯVIN™ (47)",
+        "📱SHΞЯVIN™ (49)",
+        "📱SHΞЯVIN™ (50)",
+        "📱SHΞЯVIN™ (52)",
+        "📱SHΞЯVIN™ (53)",
+        "📱SHΞЯVIN™ (54)",
+        "📱SHΞЯVIN™ (57)",
+        "📱SHΞЯVIN™ (58)",
+        "📱SHΞЯVIN™ (60)",
+        "📱SHΞЯVIN™ (64)",
+        "📱SHΞЯVIN™ (67)",
+        "📱SHΞЯVIN™ (68)",
+        "📱SHΞЯVIN™ (69)",
+        "📱SHΞЯVIN™ (74)",
+        "📱SHΞЯVIN™ (80)",
+        "📱SHΞЯVIN™ (81)",
+        "📱SHΞЯVIN™ (82)",
+        "📱SHΞЯVIN™ (83)",
+        "📱SHΞЯVIN™ (84)",
+        "📱SHΞЯVIN™ (85)",
+        "📱SHΞЯVIN™ (87)",
+        "📱SHΞЯVIN™ (88)",
+        "📱SHΞЯVIN™ (90)",
+        "📱SHΞЯVIN™ (91)",
+        "📱SHΞЯVIN™ (92)",
+        "📱SHΞЯVIN™ (93)",
+        "📱SHΞЯVIN™ (95)",
+        "📱SHΞЯVIN™ (96)",
+        "📱SHΞЯVIN™ (98)",
+        "📱SHΞЯVIN™ (99)",
+        "📱SHΞЯVIN™ (100)",
+        "📱SHΞЯVIN™ (102)",
+        "📱SHΞЯVIN™ (103)",
+        "📱SHΞЯVIN™ (104)",
+        "📱SHΞЯVIN™ (105)",
+        "📱SHΞЯVIN™ (106)",
+        "📱SHΞЯVIN™ (108)",
+        "📱SHΞЯVIN™ (109)",
+        "📱SHΞЯVIN™ (111)",
+        "📱SHΞЯVIN™ (113)",
+        "📱SHΞЯVIN™ (114)",
+        "📱SHΞЯVIN™ (115)",
+        "📱SHΞЯVIN™ (120)",
+        "📱SHΞЯVIN™ (124)",
+        "📱SHΞЯVIN™ (125)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(136)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(139)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(148)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(151)"
+      ],
+      "url": "https://detectportal.firefox.com/success.txt",
+      "interval": "1m0s"
+    },
+    {
+      "type": "selector",
+      "tag": "Lock Region ID",
+      "outbounds": [
+        "📱SHΞЯVIN™ (12)",
+        "📱SHΞЯVIN™ (13)",
+        "📱SHΞЯVIN™ (14)",
+        "📱SHΞЯVIN™ (16)",
+        "📱SHΞЯVIN™ (17)",
+        "📱SHΞЯVIN™ (18)",
+        "📱SHΞЯVIN™ (19)",
+        "📱SHΞЯVIN™ (21)",
+        "📱SHΞЯVIN™ (22)",
+        "📱SHΞЯVIN™ (23)",
+        "📱SHΞЯVIN™ (28)",
+        "📱SHΞЯVIN™ (32)",
+        "📱SHΞЯVIN™ (34)",
+        "📱SHΞЯVIN™ (36)",
+        "📱SHΞЯVIN™ (37)",
+        "📱SHΞЯVIN™ (38)",
+        "📱SHΞЯVIN™ (39)",
+        "📱SHΞЯVIN™ (40)",
+        "📱SHΞЯVIN™ (42)",
+        "📱SHΞЯVIN™ (43)",
+        "📱SHΞЯVIN™ (44)",
+        "📱SHΞЯVIN™ (45)",
+        "📱SHΞЯVIN™ (46)",
+        "📱SHΞЯVIN™ (47)",
+        "📱SHΞЯVIN™ (49)",
+        "📱SHΞЯVIN™ (50)",
+        "📱SHΞЯVIN™ (52)",
+        "📱SHΞЯVIN™ (53)",
+        "📱SHΞЯVIN™ (54)",
+        "📱SHΞЯVIN™ (57)",
+        "📱SHΞЯVIN™ (58)",
+        "📱SHΞЯVIN™ (60)",
+        "📱SHΞЯVIN™ (64)",
+        "📱SHΞЯVIN™ (67)",
+        "📱SHΞЯVIN™ (68)",
+        "📱SHΞЯVIN™ (69)",
+        "📱SHΞЯVIN™ (74)",
+        "📱SHΞЯVIN™ (80)",
+        "📱SHΞЯVIN™ (81)",
+        "📱SHΞЯVIN™ (82)",
+        "📱SHΞЯVIN™ (83)",
+        "📱SHΞЯVIN™ (84)",
+        "📱SHΞЯVIN™ (85)",
+        "📱SHΞЯVIN™ (87)",
+        "📱SHΞЯVIN™ (88)",
+        "📱SHΞЯVIN™ (90)",
+        "📱SHΞЯVIN™ (91)",
+        "📱SHΞЯVIN™ (92)",
+        "📱SHΞЯVIN™ (93)",
+        "📱SHΞЯVIN™ (95)",
+        "📱SHΞЯVIN™ (96)",
+        "📱SHΞЯVIN™ (98)",
+        "📱SHΞЯVIN™ (99)",
+        "📱SHΞЯVIN™ (100)",
+        "📱SHΞЯVIN™ (102)",
+        "📱SHΞЯVIN™ (103)",
+        "📱SHΞЯVIN™ (104)",
+        "📱SHΞЯVIN™ (105)",
+        "📱SHΞЯVIN™ (106)",
+        "📱SHΞЯVIN™ (108)",
+        "📱SHΞЯVIN™ (109)",
+        "📱SHΞЯVIN™ (111)",
+        "📱SHΞЯVIN™ (113)",
+        "📱SHΞЯVIN™ (114)",
+        "📱SHΞЯVIN™ (115)",
+        "📱SHΞЯVIN™ (120)",
+        "📱SHΞЯVIN™ (124)",
+        "📱SHΞЯVIN™ (125)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(136)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(139)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(148)",
+        "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(151)"
+      ]
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (12)",
+      "type": "vmess",
+      "server": "auth.speedtest.net",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "nelly.homes",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "nelly.homes"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (13)",
+      "type": "vmess",
+      "server": "504.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "vip2323.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "vip2323.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (14)",
+      "type": "vmess",
+      "server": "kittiy.sbs",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kittiy.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kittiy.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (16)",
+      "type": "vmess",
+      "server": "hms04.xmivideo.cfd",
+      "server_port": 443,
+      "uuid": "93ea486a-bada-42a4-ac38-d088b320fa1e",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "xmivideo.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "xmivideo.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (17)",
+      "type": "vmess",
+      "server": "muriel.makeup",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "muriel.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "muriel.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (18)",
+      "type": "vmess",
+      "server": "glweidf.cfd",
+      "server_port": 443,
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "glweidf.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (19)",
+      "type": "vmess",
+      "server": "kellie.makeup",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kellie.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kellie.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (21)",
+      "type": "vmess",
+      "server": "cloudflare.b4a-devs.org",
+      "server_port": 2083,
+      "uuid": "0a40bceb-6a30-4da2-b90b-2ae5ed018e98",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.b4a-devs.org",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cloudflare",
+        "headers": {
+          "Host": "cloudflare.b4a-devs.org"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (22)",
+      "type": "vmess",
+      "server": "506.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "marien.motorcycles",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "marien.motorcycles"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (23)",
+      "type": "vmess",
+      "server": "iran-011-join.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kittiy.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kittiy.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (28)",
+      "type": "vmess",
+      "server": "api.cdn-tgju.org",
+      "server_port": 2087,
+      "uuid": "13fc87d3-43c6-4cc1-9ab9-523d9707a113",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "api.cdn-tgju.org",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ows",
+        "headers": {
+          "Host": "api.cdn-tgju.org"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (32)",
+      "type": "vmess",
+      "server": "obdii.cfd",
+      "server_port": 443,
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "obdii.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (34)",
+      "type": "vmess",
+      "server": "104.21.15.36",
+      "server_port": 443,
+      "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "linde06.indiavideo.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "linde06.indiavideo.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (36)",
+      "type": "vmess",
+      "server": "104.21.15.212",
+      "server_port": 443,
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "glweidf.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (37)",
+      "type": "vmess",
+      "server": "172.67.207.26",
+      "server_port": 443,
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "glweidf.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (38)",
+      "type": "vmess",
+      "server": "172.67.166.31",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "inna.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "inna.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (39)",
+      "type": "vmess",
+      "server": "104.21.11.133",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "inna.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "inna.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (40)",
+      "type": "vmess",
+      "server": "104.21.4.6",
+      "server_port": 443,
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "glweidf.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (42)",
+      "type": "vmess",
+      "server": "172.67.196.110",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kellie.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kellie.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (43)",
+      "type": "vmess",
+      "server": "172.67.173.199",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "jader.fun",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "jader.fun"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (44)",
+      "type": "vmess",
+      "server": "172.67.152.214",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "meroiy.icu",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "meroiy.icu"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (45)",
+      "type": "vmess",
+      "server": "104.21.32.223",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "muriel.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "muriel.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (46)",
+      "type": "vmess",
+      "server": "104.21.16.62",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "irene.lat",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "irene.lat"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (47)",
+      "type": "vmess",
+      "server": "104.26.9.202",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "vip2323.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "vip2323.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (49)",
+      "type": "vmess",
+      "server": "104.21.66.23",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kristin.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kristin.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (50)",
+      "type": "vmess",
+      "server": "135.148.62.165",
+      "server_port": 22673,
+      "uuid": "4c9ded6a-626a-48fe-a7eb-6f0bee8a9a36",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (52)",
+      "type": "vmess",
+      "server": "104.21.44.106",
+      "server_port": 443,
+      "uuid": "93ea486a-bada-42a4-ac38-d088b320fa1e",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "xmivideo.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "xmivideo.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (53)",
+      "type": "vmess",
+      "server": "cxc--join.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "obdii.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (54)",
+      "type": "vmess",
+      "server": "500.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "janett.click",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "janett.click"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (57)",
+      "type": "vmess",
+      "server": "meroiy.icu",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "meroiy.icu",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "meroiy.icu"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (58)",
+      "type": "vmess",
+      "server": "auth.speedtest.net",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "nelly.homes",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "nelly.homes"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (60)",
+      "type": "vmess",
+      "server": "kittiy.sbs",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kittiy.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kittiy.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (64)",
+      "type": "vmess",
+      "server": "glweidf.cfd",
+      "server_port": 443,
+      "uuid": "1052f24e-7b09-45eb-b0c5-d858eb124192",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "glweidf.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (67)",
+      "type": "vmess",
+      "server": "cloudflare.b4a-devs.org",
+      "server_port": 2083,
+      "uuid": "0a40bceb-6a30-4da2-b90b-2ae5ed018e98",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.b4a-devs.org",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cloudflare",
+        "headers": {
+          "Host": "cloudflare.b4a-devs.org"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (68)",
+      "type": "vmess",
+      "server": "506.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "marien.motorcycles",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "marien.motorcycles"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (69)",
+      "type": "vmess",
+      "server": "iran-011-join.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kittiy.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kittiy.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (74)",
+      "type": "vmess",
+      "server": "api.cdn-tgju.org",
+      "server_port": 2087,
+      "uuid": "13fc87d3-43c6-4cc1-9ab9-523d9707a113",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "api.cdn-tgju.org",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ows",
+        "headers": {
+          "Host": "api.cdn-tgju.org"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (80)",
+      "type": "vmess",
+      "server": "104.21.15.36",
+      "server_port": 443,
+      "uuid": "edbb1059-1633-4271-b66e-ed4fba47a1bf",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "linde06.indiavideo.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "linde06.indiavideo.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (81)",
+      "type": "vmess",
+      "server": "172.67.68.246",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "vip2323.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "vip2323.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (82)",
+      "type": "vmess",
+      "server": "104.21.15.212",
+      "server_port": 443,
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "glweidf.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (83)",
+      "type": "vmess",
+      "server": "172.67.207.26",
+      "server_port": 443,
+      "uuid": "76221bfb-e92f-4e80-81c5-6fe48f50ac0b",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "glweidf.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "glweidf.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (84)",
+      "type": "vmess",
+      "server": "172.67.166.31",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "inna.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "inna.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (85)",
+      "type": "vmess",
+      "server": "104.21.11.133",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "inna.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "inna.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (87)",
+      "type": "vmess",
+      "server": "172.67.196.112",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kellie.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kellie.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (88)",
+      "type": "vmess",
+      "server": "172.67.196.110",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kellie.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kellie.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (90)",
+      "type": "vmess",
+      "server": "172.67.152.214",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "meroiy.icu",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "meroiy.icu"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (91)",
+      "type": "vmess",
+      "server": "104.21.32.223",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "muriel.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "muriel.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (92)",
+      "type": "vmess",
+      "server": "104.21.16.62",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "irene.lat",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "irene.lat"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (93)",
+      "type": "vmess",
+      "server": "104.26.9.202",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "vip2323.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "vip2323.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (95)",
+      "type": "vmess",
+      "server": "104.21.66.23",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kristin.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kristin.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (96)",
+      "type": "vmess",
+      "server": "135.148.62.165",
+      "server_port": 22673,
+      "uuid": "4c9ded6a-626a-48fe-a7eb-6f0bee8a9a36",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (98)",
+      "type": "vmess",
+      "server": "104.21.44.106",
+      "server_port": 443,
+      "uuid": "93ea486a-bada-42a4-ac38-d088b320fa1e",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "xmivideo.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "xmivideo.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (99)",
+      "type": "vmess",
+      "server": "cxc--join.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "obdii.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (100)",
+      "type": "vmess",
+      "server": "500.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "janett.click",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "janett.click"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (102)",
+      "type": "vmess",
+      "server": "503.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "vip2323.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "vip2323.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (103)",
+      "type": "vmess",
+      "server": "meroiy.icu",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "meroiy.icu",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "meroiy.icu"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (104)",
+      "type": "vmess",
+      "server": "auth.speedtest.net",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "nelly.homes",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "nelly.homes"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (105)",
+      "type": "vmess",
+      "server": "504.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "vip2323.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "vip2323.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (106)",
+      "type": "vmess",
+      "server": "kittiy.sbs",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kittiy.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kittiy.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (108)",
+      "type": "vmess",
+      "server": "hms04.xmivideo.cfd",
+      "server_port": 443,
+      "uuid": "93ea486a-bada-42a4-ac38-d088b320fa1e",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "xmivideo.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "xmivideo.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (109)",
+      "type": "vmess",
+      "server": "muriel.makeup",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "muriel.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "muriel.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (111)",
+      "type": "vmess",
+      "server": "kellie.makeup",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kellie.makeup",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kellie.makeup"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (113)",
+      "type": "vmess",
+      "server": "cloudflare.b4a-devs.org",
+      "server_port": 2083,
+      "uuid": "0a40bceb-6a30-4da2-b90b-2ae5ed018e98",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "cloudflare.b4a-devs.org",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cloudflare",
+        "headers": {
+          "Host": "cloudflare.b4a-devs.org"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (114)",
+      "type": "vmess",
+      "server": "506.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "marien.motorcycles",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "marien.motorcycles"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (115)",
+      "type": "vmess",
+      "server": "iran-011-join.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "kittiy.sbs",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "kittiy.sbs"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (120)",
+      "type": "vmess",
+      "server": "api.cdn-tgju.org",
+      "server_port": 2087,
+      "uuid": "13fc87d3-43c6-4cc1-9ab9-523d9707a113",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "api.cdn-tgju.org",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ows",
+        "headers": {
+          "Host": "api.cdn-tgju.org"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (124)",
+      "type": "vmess",
+      "server": "obdii.cfd",
+      "server_port": 443,
+      "uuid": "05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "obdii.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkws",
+        "headers": {
+          "Host": "obdii.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "📱SHΞЯVIN™ (125)",
+      "type": "vmess",
+      "server": "fragment---join.outline-vpn.cloud",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "vip2323.cfd",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/linkvws",
+        "headers": {
+          "Host": "vip2323.cfd"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(136)",
+      "type": "vless",
+      "server": "104.21.17.126",
+      "server_port": 2053,
+      "uuid": "06f85fe7-a402-4f03-da51-91c6e87e03ee",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "2xs1.netsalem.org",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": null,
+        "idle_timeout": "15s",
+        "ping_timeout": "15s",
+        "permit_without_stream": false
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(139)",
+      "type": "vless",
+      "server": "146.19.233.85",
+      "server_port": 443,
+      "uuid": "691da42c-0a59-48e2-eb78-441b97ee14e4",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "de1.alphav2ray.link",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": null,
+        "idle_timeout": "15s",
+        "ping_timeout": "15s",
+        "permit_without_stream": false
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(148)",
+      "type": "vless",
+      "server": "104.21.17.126",
+      "server_port": 2053,
+      "uuid": "06f85fe7-a402-4f03-da51-91c6e87e03ee",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "2xs1.netsalem.org",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": null,
+        "idle_timeout": "15s",
+        "ping_timeout": "15s",
+        "permit_without_stream": false
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "tag": "%F0%9F%93%B1SH%CE%9E%D0%AFVIN%E2%84%A2%20(151)",
+      "type": "vless",
+      "server": "146.19.233.85",
+      "server_port": 443,
+      "uuid": "691da42c-0a59-48e2-eb78-441b97ee14e4",
+      "flow": "",
+      "packet_encoding": "xudp",
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "de1.alphav2ray.link",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": null,
+        "idle_timeout": "15s",
+        "ping_timeout": "15s",
+        "permit_without_stream": false
+      },
+      "domain_strategy": "ipv4_only"
+    },
+    {
+      "type": "selector",
+      "tag": "WhatsApp",
+      "outbounds": [
+        "direct",
+        "Internet",
+        "Best Latency",
+        "Lock Region ID"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "GAMESMAX(ML/FF/AOV)",
+      "outbounds": [
+        "direct",
+        "Internet",
+        "Best Latency",
+        "Lock Region ID"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "Route Port Game",
+      "outbounds": [
+        "direct",
+        "Internet",
+        "Best Latency",
+        "Lock Region ID"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "Option ADs",
+      "outbounds": [
+        "block",
+        "Internet"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "Option P0rn",
+      "outbounds": [
+        "block",
+        "Internet"
+      ]
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "Internet",
+    "geoip": {
+      "download_url": "https://github.com/malikshi/sing-box-geo/releases/latest/download/geoip.db",
+      "download_detour": "Best Latency"
+    },
+    "geosite": {
+      "download_url": "https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.db",
+      "download_detour": "Best Latency"
+    },
+    "rules": [
+      {
+        "outbound": "dns-out",
+        "port": [
+          53
+        ]
+      },
+      {
+        "network": "udp",
+        "port": [
+          443
+        ],
+        "outbound": "block"
+      },
+      {
+        "domain_suffix": [
+          "googlesyndication.com"
+        ],
+        "outbound": "Internet"
+      },
+      {
+        "geosite": [
+          "rule-ads",
+          "oisd-full"
+        ],
+        "outbound": "Option ADs"
+      },
+      {
+        "geosite": [
+          "oisd-nsfw",
+          "category-porn"
+        ],
+        "outbound": "Option P0rn"
+      },
+      {
+        "geosite": "whatsapp",
+        "outbound": "WhatsApp"
+      },
+      {
+        "geoip": "facebook",
+        "port": [
+          3478,
+          4244,
+          5222,
+          5223,
+          5242,
+          45395,
+          50318,
+          59234
+        ],
+        "outbound": "WhatsApp"
+      },
+      {
+        "protocol": "stun",
+        "outbound": "Internet"
+      },
+      {
+        "geosite": [
+          "rule-indo"
+        ],
+        "outbound": "Lock Region ID"
+      },
+      {
+        "network": "udp",
+        "port": [
+          2702,
+          3702,
+          8443,
+          9120,
+          9992,
+          10003,
+          6006,
+          6008,
+          6674,
+          7889,
+          8008,
+          8130,
+          8443,
+          9008,
+          9120,
+          10100,
+          12008,
+          13008,
+          8011,
+          9030,
+          10491,
+          10612,
+          12235,
+          13004,
+          13748,
+          17000,
+          17500,
+          10039,
+          10096,
+          11455,
+          13894,
+          13972
+        ],
+        "port_range": [
+          "4001:4009",
+          "5000:5221",
+          "5224:5241",
+          "5243:5287",
+          "5289:5352",
+          "5354:5509",
+          "5517:5529",
+          "5551:5559",
+          "5601:5700",
+          "9000:9010",
+          "30000:30300",
+          "7006:7008",
+          "8001:8012",
+          "10000:10015",
+          "11000:11019",
+          "10101:10201",
+          "10080:10110",
+          "17000:18000"
+        ],
+        "outbound": "GAMESMAX(ML/FF/AOV)"
+      },
+      {
+        "network": "tcp",
+        "port": [
+          5517,
+          8443,
+          9443,
+          10003,
+          6006,
+          6008,
+          6674,
+          7889,
+          9006,
+          9137,
+          12006,
+          12008,
+          13006,
+          15006,
+          20561,
+          39003,
+          39006,
+          39698,
+          39779,
+          39800,
+          10012,
+          14000,
+          15692,
+          17000,
+          17500,
+          18081,
+          20371,
+          8013,
+          8085,
+          18082,
+          20000,
+          50000,
+          65010,
+          65050,
+          8013,
+          18082,
+          20166,
+          31003,
+          33445,
+          50000,
+          42472,
+          14422,
+          16999,
+          8013,
+          8888,
+          30031,
+          14009,
+          40005,
+          9339,
+          2099,
+          8088,
+          5692,
+          8085,
+          8500,
+          10000,
+          10082,
+          20000,
+          25000,
+          29134,
+          31003
+        ],
+        "port_range": [
+          "5000:5221",
+          "5224:5227",
+          "5229:5241",
+          "5243:5287",
+          "5289:5352",
+          "5354:5509",
+          "5520:5529",
+          "5551:5559",
+          "5601:5700",
+          "9000:9010",
+          "30000:30300",
+          "7006:7008",
+          "8001:8012",
+          "10000:10012",
+          "11000:11019",
+          "8085:8088",
+          "10000:10019",
+          "20000:20002",
+          "10000:10001",
+          "20000:20001",
+          "9330:9340",
+          "2080:2099",
+          "9100:9200",
+          "8230:8250",
+          "8110:8120",
+          "27000:28998",
+          "7770:7790",
+          "44590:44610",
+          "10500:10515",
+          "27015:27030",
+          "27036:27037",
+          "39190:39200",
+          "49001:49190",
+          "8393:8400"
+        ],
+        "outbound": "Route Port Game"
+      },
+      {
+        "network": "udp",
+        "port": [
+          2702,
+          3702,
+          8443,
+          9120,
+          9992,
+          10003,
+          6006,
+          6008,
+          6674,
+          7889,
+          8008,
+          8130,
+          8443,
+          9008,
+          9120,
+          10100,
+          12008,
+          13008,
+          8700,
+          10013,
+          10019,
+          10039,
+          10096,
+          10491,
+          10612,
+          11455,
+          12235,
+          13748,
+          13894,
+          13972,
+          17000,
+          17500,
+          8700,
+          9030,
+          8011,
+          9030,
+          10491,
+          10612,
+          12235,
+          13004,
+          13748,
+          17000,
+          17500,
+          10039,
+          10096,
+          11455,
+          13894,
+          13972,
+          42472,
+          5100,
+          39000,
+          4380,
+          27036,
+          14422,
+          16999,
+          8013,
+          8888,
+          8000,
+          30104,
+          14009,
+          40005,
+          8088,
+          5010,
+          6650,
+          8011,
+          8700,
+          20000,
+          25000,
+          29134,
+          30000
+        ],
+        "port_range": [
+          "4001:4009",
+          "5000:5221",
+          "5224:5241",
+          "5243:5287",
+          "5289:5352",
+          "5354:5509",
+          "5517:5529",
+          "5551:5559",
+          "5601:5700",
+          "9000:9010",
+          "30000:30300",
+          "7006:7008",
+          "8001:8012",
+          "10000:10015",
+          "11000:11019",
+          "7086:7995",
+          "8011:8013",
+          "9030:9031",
+          "20000:20002",
+          "12070:12460",
+          "41182:41192",
+          "7500:7995",
+          "10010:10019",
+          "20000:20001",
+          "10101:10201",
+          "10080:10110",
+          "17000:18000",
+          "5055:5058",
+          "22101:22102",
+          "9330:9340",
+          "27000:28998",
+          "16300:16350",
+          "40000:40010",
+          "60970:60980",
+          "27000:27031",
+          "40000:40010",
+          "7000:8000",
+          "8180:8181",
+          "27016:27024",
+          "54000:54012"
+        ],
+        "outbound": "Route Port Game"
+      },
+      {
+        "geoip": [
+          "id"
+        ],
+        "port": [
+          21,
+          22,
+          23,
+          80,
+          81,
+          123,
+          143,
+          182,
+          183,
+          194,
+          443,
+          465,
+          587,
+          853,
+          993,
+          995,
+          998,
+          2052,
+          2053,
+          2082,
+          2083,
+          2086,
+          2095,
+          2096,
+          5222,
+          5228,
+          5229,
+          5230,
+          8000,
+          8080,
+          8081,
+          8088,
+          8443,
+          8880,
+          8883,
+          8888,
+          8889,
+          42069
+        ],
+        "outbound": "Lock Region ID"
+      },
+      {
+        "port": [
+          21,
+          22,
+          23,
+          80,
+          81,
+          123,
+          143,
+          182,
+          183,
+          194,
+          443,
+          465,
+          587,
+          853,
+          993,
+          995,
+          998,
+          2052,
+          2053,
+          2082,
+          2083,
+          2086,
+          2095,
+          2096,
+          5222,
+          5228,
+          5229,
+          5230,
+          8000,
+          8080,
+          8081,
+          8088,
+          8443,
+          8880,
+          8883,
+          8888,
+          8889,
+          42069
+        ],
+        "outbound": "Internet"
+      },
+      {
+        "port_range": [
+          "1023:42068",
+          "42070:65535"
+        ],
+        "outbound": "Route Port Game"
+      }
+    ]
+  }
+}
